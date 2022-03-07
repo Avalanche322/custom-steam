@@ -6,9 +6,16 @@
           "steam-dev-1"
         ]
       }
+    },
+    "steam-dev-2": {
+      "hosting": {
+        "custom-steam": [
+          "steam-dev-2"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "steam-dev-1"
+    "default": "steam-dev-2"
   }
 }

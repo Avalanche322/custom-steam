@@ -111,8 +111,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "custom-steam:build:production",
-            "firebaseProject": "steam-dev-1",
-            "firebaseHostingSite": "steam-dev-1"
+            "firebaseProject": "steam-dev-2",
+            "firebaseHostingSite": "steam-dev-2"
           }
         }
       }

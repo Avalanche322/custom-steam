@@ -12,6 +12,7 @@ export const environment = {
     apiKey: '',
     authDomain: '',
     messagingSenderId: '',
+    measurementId: '',
   },
 };
 

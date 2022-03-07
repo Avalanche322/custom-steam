@@ -7,6 +7,7 @@ export const environment = {
     apiKey: '',
     authDomain: '',
     messagingSenderId: '',
+    measurementId: '',
   },
   production: true
 };
