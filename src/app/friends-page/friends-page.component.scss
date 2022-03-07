@@ -1,0 +1,11 @@
+.friends {
+  &__item{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &__not-found{
+    font-size: 18px;
+  }
+  @media (max-width: 575px) {
+    padding-top: 0;
+  }
+}

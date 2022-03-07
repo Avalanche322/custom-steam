@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "steam-dev-1": {
+      "hosting": {
+        "custom-steam": [
+          "steam-dev-1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "steam-dev-1"
+  }
+}

@@ -1,0 +1,8 @@
+<li class="friends__item d-flex justify-content-between align-items-center rounded-3 p-2 mt-4">
+  <p class="m-0 text-break w-50">{{user?.displayName}}</p>
+  <button
+    [ngClass]="['btn btn-primary', typeItem === 'friend' ? 'btn-accent' : 'btn-warn' ]"
+    (click)="onClick()"
+    [disabled]="disableBtn"
+    >{{typeItem === 'friend' ? 'Add Friend' : 'Remove Friend'}}</button>
+</li>

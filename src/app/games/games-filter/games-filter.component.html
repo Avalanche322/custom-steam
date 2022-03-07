@@ -1,0 +1,15 @@
+<form #filterForm="ngForm" (ngSubmit)="onFilterSubmit(filterForm.value)" class="filter-form">
+  <h4 class="filter-form__header">Filter by price</h4>
+  <input [(ngModel)]="range"
+   type="range" step="50"
+    name="range" class="filter-form__range"
+    min="0" max="{{ maxPrice }}" value="1000"
+    id="myRange">
+  <div class="filter-form__price">{{ range === 0 ? 'Any price' : '< ' + range + ' UAH'}}</div>
+  <h4 class="filter-form__tag">Filter by tag</h4>
+  <label *ngFor="let tag of tags" class="filter-form__label">
+    <input ngModel name="{{tag}}" type="checkbox" >{{tag}}
+    <span class="filter-form__checkmark"></span>
+  </label>
+  <button type="submit" class="btn btn-primary filter-form__submit btn-accent">Apply filters</button>
+</form>

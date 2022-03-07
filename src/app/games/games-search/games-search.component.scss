@@ -1,0 +1,57 @@
+
+.games-search {
+  position: relative;
+  &__header {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-shadow: 0px 2px 3px rgba(119,119,119,0.52);
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  &__searchbox {
+    font-family: Roboto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__input {
+    flex-grow: 1;
+    padding: 6px 10px;
+    max-width: 997px;
+    margin-right: 8px;
+    border-radius: 4px;
+    outline: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 25%);
+    background-color: transparent;
+    border: 0.5px solid #000;
+    &::placeholder {
+      font-family: Roboto;
+      color: #777777;
+      font-weight: 400;
+      text-shadow: 0px 2px 3px rgba(119,119,119,0.52);
+    }
+  }
+  &__btn {
+    font-family: Roboto;
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 75px;
+    max-height: 32px;
+    box-shadow: 0px 7px 7px rgb(0 0 0 / 25%);
+  }
+  &__error {
+    position: absolute;
+    bottom: -25px;
+    left: 10px;
+    font-size: 12px;
+    color: red;
+    display: block;
+  }
+}
+

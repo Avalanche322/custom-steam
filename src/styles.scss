@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$bg: #F4F4F4;
+$second-bg: #FFFF;
+$accent: #6C69FF;
+$accent-hover: #5251be;
+$warn: #FF6F6F;
+$warn-hover: #d36161;
+
+%common-btn{
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+body{
+  background: $bg;
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper{
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  flex: 1 1 auto;
+}
+
+.contents{
+  background: $second-bg;
+  padding: 20px 60px 20px;
+  min-height: 100%;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  min-height: 100vh;
+  @media (max-width: 575px) {
+    padding: 64px 15px 60px;
+  }
+}
+
+.btn-accent{
+  background: $accent;
+  border-color: $accent;
+  @extend %common-btn;
+  &:hover{
+    background: $accent-hover;
+    border-color: $accent-hover;
+  }
+}
+.btn-warn{
+  background: $warn;
+  border-color: $warn;
+  @extend %common-btn;
+  &:hover{
+    background: $warn-hover;
+    border-color: $warn-hover;
+  }
+}
+
+
+

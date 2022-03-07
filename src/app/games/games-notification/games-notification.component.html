@@ -1,0 +1,7 @@
+<div class="notification"
+[ngClass]="{'notification': true, 'notification_remove': !actionType}">
+  <span *ngIf="messageType==='games'">
+    Game "{{ name }}" {{ actionType  ? 'is added to ': 'is removed from '}}library
+  </span>
+  <span *ngIf="messageType==='library'">Link for "{{ name }}" is copied</span>
+</div>

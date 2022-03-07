@@ -1,0 +1,118 @@
+@import '../../../styles.scss';
+
+.header {
+  background-color: $second-bg;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 20px;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 56px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &__main {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 20px;
+  }
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &_item {
+      margin-right: 20px;
+    }
+  }
+}
+
+.header__list_item a, .logout a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  animation-duration: 0.5s;
+  animation-name: appear;
+}
+
+.header__list_item a:hover, .logout a:hover {
+  color: $accent;
+}
+
+.current-page {
+  color: $accent !important;
+}
+
+.logout {
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#user-name {
+  font-size: 12px;
+  color: grey;
+  animation-duration: 0.5s;
+  animation-name: appear;
+}
+
+svg {
+  fill: $accent;
+  transition: all 0.4s;
+  &:hover {
+  fill: $accent-hover;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    font-size: 17px;
+    padding: 8px 15px;
+  }
+  .header__icon {
+    margin-right: 15px;
+  }
+  .header__list_item {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+  .header__icon {
+    margin-right: 10px;
+  }
+  .header__list_item {
+    margin-right: 10px;
+  }
+  .logout {
+    font-size: 15px;
+  }
+  svg {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media (min-width: 800px) {
+  .logout {
+    padding-right: 20px;
+  }
+}
+
+@keyframes appear {
+  0% {opacity: 0;}
+  25% {opacity: 0.25;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}

@@ -1,0 +1,12 @@
+<div class="form">
+  <form [formGroup]="profileForm" (ngSubmit)="submit()">
+    <ng-container *ngIf="user$ | async as user">
+      <h2 class="form__header">Profile</h2>
+      <label class="form__label" for="username">Username</label>
+      <input class="form__input" type="text" id="username" placeholder="{{user.displayName}}" formControlName="name">
+      <label class="form__label" for="email">Email</label>
+      <input class="form__input" type="email" id="email" placeholder="{{user.email}}" disabled>
+      <button class="btn btn-primary form__button btn-accent" type="submit">Save</button>
+    </ng-container>
+  </form>
+</div>

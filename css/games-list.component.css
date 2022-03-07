@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.btn-accent, .btn-warn {
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  background: #F4F4F4;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.contents {
+  background: #FFFF;
+  padding: 20px 60px 20px;
+  min-height: 100%;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  min-height: 100vh;
+}
+
+@media (max-width: 575px) {
+  .contents {
+    padding: 64px 15px 60px;
+  }
+}
+
+.btn-accent {
+  background: #6C69FF;
+  border-color: #6C69FF;
+}
+
+.btn-accent:hover {
+  background: #5251be;
+  border-color: #5251be;
+}
+
+.btn-warn {
+  background: #FF6F6F;
+  border-color: #FF6F6F;
+}
+
+.btn-warn:hover {
+  background: #d36161;
+  border-color: #d36161;
+}
+
+:host {
+  margin-left: auto;
+  position: relative;
+}
+
+.games-gallery {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  padding: 0 15px 10px 15px;
+  max-width: 866px;
+  min-height: 640px;
+  max-height: 640px;
+  overflow-y: auto;
+  margin-right: 20px;
+}
+
+.games-gallery__item {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.games-gallery__loader {
+  margin-bottom: 350px;
+}
+
+.games-gallery__not-found {
+  min-height: 640px;
+}
+
+@media (min-width: 992px) {
+  .games-gallery {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .games-gallery {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .games-gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6C69FF;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5251be;
+}

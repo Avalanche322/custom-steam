@@ -1,0 +1,82 @@
+.games-card {
+  overflow: hidden;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  max-height: 312px;
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #bdbcff;
+    padding: 8px;
+    height: 150px;
+  }
+
+  &__header {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+  }
+
+  &__price {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    align-self: flex-end;
+  }
+
+  &__description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 16px 16px 8px 16px;
+    height: 90px;
+    overflow-y: hidden;
+  }
+  &__library_btns {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  &__btn {
+    font-family: Roboto;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 16px;
+    max-height: 32px;
+    box-shadow: 0px 7px 7px rgb(0 0 0 / 25%);
+    margin: 0 12px 16px 12px;
+    flex-grow: 1;
+    pointer-events: auto;
+    &_lib {
+      font-family: Roboto;
+      padding: 8px 16px;
+      font-size: 14px;
+      line-height: 16px;
+      width: 120px;
+      max-width: 120px;
+      max-height: 32px;
+      color:  #fff;
+      &_white {
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
+
+}
+
+

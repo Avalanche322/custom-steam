@@ -1,0 +1,15 @@
+<h2>Search Friends: {{searchName}}</h2>
+<ul *ngIf="isEmptyFindFriend; else emptyFindFriendBlock" class="friends__items p-0">
+  <app-item-friend
+    *ngFor="let user of findFriends"
+    [user]="user"
+    (btnClick)="addOrDeleteFriend(user) ? handelDeleteFriend(user) : handelAddFriend(user)"
+    [typeItem]="addOrDeleteFriend(user) ? 'find-friend' : 'friend'"
+    [disableBtn]="disableBtn"
+    ></app-item-friend>
+</ul>
+<ng-template #emptyFindFriendBlock>
+  <p class="friends__not-found text-center mt-5">
+    Not Found
+  </p>
+</ng-template>

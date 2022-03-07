@@ -1,0 +1,38 @@
+<div class="games-card">
+  <div class="games-card__heading">
+    <h2 class="games-card__header">{{ gameInfo.name }}</h2>
+    <span class="games-card__price">{{ gameInfo.price }} UAH</span>
+  </div>
+  <p class="games-card__description">
+    {{ gameInfo.description }}
+  </p>
+  <button [ngClass]="
+  {'btn': true, 'games-card__btn': true ,
+  'btn-accent': !userHasInLib, 'btn-warn': userHasInLib}"
+  *ngIf="notLibraryItem; else libraryButtons"
+  (click)="triggerNotification(gameInfo.name)"
+  (click)="changeUserLibrary(gameInfo.id)"
+  [disabled]="userLogged"
+  title="{{!userLogged ? '' : 'please log in first'}}">
+  {{ userHasInLib ? 'Remove from' : 'Add to'}} Library</button>
+  <ng-template #libraryButtons>
+    <div class="games-card__library_btns">
+      <a href="{{ gameInfo.link}}" target="_blank" class="btn games-card__btn_lib btn-accent"
+      >Download</a>
+      <button class="btn games-card__btn_lib games-card__btn_lib_white btn-accent"
+      ngxClipboard [cbContent]="gameInfo.link"
+      (click)="triggerNotification(gameInfo.name)"
+      >Share</button>
+    </div>
+  </ng-template>
+</div>
+
+<app-games-notification
+*ngIf="showNotification"
+[name]="gameName"
+[messageType]="notLibraryItem ? 'games' : 'library'"
+[actionType]="userHasInLib"
+>
+</app-games-notification>
+
+

@@ -1,0 +1,10 @@
+@import '../../../styles.scss';
+
+.loader{
+  margin-top: 200px;
+  &__spiner{
+    height: 50px;
+    width: 50px;
+    color: $accent;
+  }
+}

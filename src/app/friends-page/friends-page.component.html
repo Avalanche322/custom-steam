@@ -1,0 +1,48 @@
+<section class="friends position-relative">
+  <div class="container contents rounded-3">
+    <!--======================Search fieald======================-->
+    <h2 class="mb-4">Friends</h2>
+    <app-search-form
+      [title]="titleSearch"
+      (btnClick)="searchFriends($event)"
+      (changeInput)="onInputChange($event)"
+      [countResults]="searchBtnClick && searchCnageInput ? findFriends.length : friends.length"
+      [disableBtn]="loaderService.isLoading$ | async"
+    ></app-search-form>
+
+    <!--======================Notification======================-->
+    <app-notification
+      *ngIf="showNotification"
+      [typeNotification]="typeNotification"
+      [text]="textNotification"
+    ></app-notification>
+
+    <!--======================Loading======================-->
+    <app-loader *ngIf="loaderService.isLoading$ | async; else contentBlock"></app-loader>
+
+    <!--======================Search Friends List======================-->
+    <ng-template #contentBlock>
+      <div *ngIf="searchBtnClick && searchCnageInput; else myFrindBlock" class="mt-4">
+        <app-search-friends
+          [searchName]="searchName"
+          [isEmptyFindFriend]="isEmptyFindFriend"
+          [findFriends]="findFriends"
+          [friends]="friends"
+          [disableBtn]="loaderService.isLoading$ | async"
+          (deleteFriend)="deleteFriend($event)"
+          (addFriend)="addFriend($event)"
+        ></app-search-friends>
+      </div>
+
+      <!--======================My Friends List======================-->
+      <ng-template #myFrindBlock>
+        <app-my-friends
+          [friends]="friends"
+          [isEmptyFriend]="isEmptyFriend"
+          [disableBtn]="loaderService.isLoading$ | async"
+          (deleteFriend)="deleteFriend($event)"
+        ></app-my-friends>
+      </ng-template>
+    </ng-template>
+  </div>
+</section>

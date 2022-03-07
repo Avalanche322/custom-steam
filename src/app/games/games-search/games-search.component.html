@@ -1,0 +1,19 @@
+<div class="games-search">
+  <h3 class="games-search__header">Search Games </h3>
+<form  (ngSubmit)="onSubmit()" class="games-search__searchbox">
+  <input [(ngModel)]="gameName"
+   #gameSearch="ngModel"
+    pattern="[\w\s]*"
+    name="search"
+    class="games-search__input"
+    type="text"
+    placeholder="Search Games">
+  <div class="games-search__error" *ngIf="gameSearch.errors?.['pattern']">
+    Please avoid special symbols and cyrilic letters
+  </div>
+<button [disabled]="gameSearch.errors?.['pattern']"
+ type="submit" #searchBtn
+ class="btn btn-primary games-search__btn btn-accent">Search</button>
+</form>
+</div>
+

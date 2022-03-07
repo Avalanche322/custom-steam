@@ -1,0 +1,14 @@
+<div class="form">
+  <h2 class="form__header">Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <label class="form__label" for="email">Email</label>
+      <input class="form__input" type="email" id="email" placeholder="Email *" formControlName="email">
+      <span class="form__msg" *ngIf="email?.errors?.['required'] && email?.touched">Email is required</span>
+      <span class="form__msg" *ngIf="email?.errors?.['email'] && email?.touched">Invalid email format</span>
+    <label class="form__label" for="password">Password</label>
+      <input class="form__input" type="password" id="password" placeholder="Password *" formControlName="password">
+      <span class="form__msg" *ngIf="password?.errors?.['required'] && password?.touched">Password is required</span>
+    <button class="btn btn-primary form__button btn-accent" type="submit">Login</button>
+    <span class="form__span">New to our platform? <a class="form__span_link" routerLink="/sign-up">Sign up!</a></span>
+  </form>
+</div>

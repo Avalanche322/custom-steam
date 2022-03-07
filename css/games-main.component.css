@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.btn-accent, .btn-warn, .games-main {
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  background: #F4F4F4;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.contents {
+  background: #FFFF;
+  padding: 20px 60px 20px;
+  min-height: 100%;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  min-height: 100vh;
+}
+
+@media (max-width: 575px) {
+  .contents {
+    padding: 64px 15px 60px;
+  }
+}
+
+.btn-accent {
+  background: #6C69FF;
+  border-color: #6C69FF;
+}
+
+.btn-accent:hover {
+  background: #5251be;
+  border-color: #5251be;
+}
+
+.btn-warn {
+  background: #FF6F6F;
+  border-color: #FF6F6F;
+}
+
+.btn-warn:hover {
+  background: #d36161;
+  border-color: #d36161;
+}
+
+.games-main {
+  margin: 0 auto;
+  margin-top: 0;
+  max-width: 1200px;
+  background-color: #FFFF !important;
+  padding: 20px 60px 5px 60px;
+}
+
+.games-main__header {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.games-main__header_featured {
+  margin: 20px 0 30px 0;
+}
+
+.games-main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

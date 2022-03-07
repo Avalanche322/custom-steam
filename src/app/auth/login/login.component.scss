@@ -1,0 +1,16 @@
+@import '../auth.scss';
+
+.form {
+  height: 340px;
+}
+
+.form__span {
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_link {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+}

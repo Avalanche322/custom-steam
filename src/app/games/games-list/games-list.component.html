@@ -1,0 +1,20 @@
+
+<div class="games-gallery__loader"
+*ngIf="loaderService.isLoading$ | async; else contentBlock">
+  <app-loader></app-loader>
+</div>
+<ng-template #contentBlock>
+  <div class="games-gallery" *ngIf="filteredList.length; else elseBlock">
+    <app-games-card class="games-gallery__item"
+     *ngFor="let game of filteredList"
+      [gameInfo]="game"
+      [userHasInLib]="checkUserLibrary(game.id)"></app-games-card>
+ </div>
+ <ng-template #elseBlock >
+   <div class="games-gallery__not-found">
+    <h3>Sorry, no games were found for your request</h3>
+   </div>
+ </ng-template>
+</ng-template>
+
+

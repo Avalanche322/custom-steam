@@ -1,0 +1,19 @@
+<div class="container games-library rounded-3">
+  <h3 class="games-library__header">My Games</h3>
+  <div class="games-library__content">
+    <app-loader *ngIf="loaderService.isLoading$ | async; else contentBlock"></app-loader>
+    <ng-template #contentBlock>
+      <div class="games-library__gallery" *ngIf="libraryGames.length; else elseBlock">
+        <app-games-card class="games-library__item"
+         *ngFor="let game of libraryGames"
+         [gameInfo]="game"
+         [notLibraryItem]="false"
+         ></app-games-card>
+    </div>
+    <ng-template #elseBlock>
+      <h3 class="games-library__header games-library__header_accent">Sorry, you don`t have any games in library yet.</h3>
+    </ng-template>
+    </ng-template>
+  </div>
+</div>
+

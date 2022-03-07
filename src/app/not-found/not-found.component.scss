@@ -1,0 +1,16 @@
+@import '../../styles.scss';
+
+.not-found {
+  &__title{
+    font-size: 44px;
+  }
+  &__link{
+    text-decoration: none;
+    color: $accent;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    &:hover{
+      color: $accent-hover;
+    }
+  }
+}

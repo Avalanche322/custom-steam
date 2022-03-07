@@ -1,0 +1,15 @@
+<label for="search-friend-input" class="form-label fs-5">{{'Search '+title}}</label>
+<div class="d-flex">
+  <input
+    type="text"
+    name="search-friend-input"
+    id="search-friend-input"
+    class="form-control"
+    [placeholder]="'Search '+title" [value]="inputText"
+    [(ngModel)]="inputText"
+    (ngModelChange)="onInputChange()"
+    [disabled]="this.disableBtn ? 'true' : 'false'"
+    (keyup.enter)="onClick()">
+  <button class="btn btn-primary btn-accent ms-3" (click)="onClick()" [disabled]="disableBtn">Search</button>
+</div>
+<p class="mt-2 fs-5 d-block">Results: {{countResults}}</p>

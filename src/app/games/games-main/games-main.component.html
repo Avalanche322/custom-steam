@@ -1,0 +1,16 @@
+<div class="container games-main rounded-3">
+  <h2 class="games-main__header">Games</h2>
+  <app-games-search [triggerSearch]="triggerSearchParent" (searchOutput)="setSearchQuery($event)"></app-games-search>
+  <h2 class="games-main__header games-main__header_featured">Featured Games</h2>
+  <div class="games-main__content">
+    <app-games-list
+     [searchForList]="searchQuery"
+     [filterForList]="filterQuery"
+    ></app-games-list>
+    <app-games-filter (filterOutput)="setFilterQuery($event)"></app-games-filter>
+  </div>
+</div>
+
+
+
+
